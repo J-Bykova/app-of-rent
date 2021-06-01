@@ -10,7 +10,7 @@ export default function MainPage() {
               <a className="header__logo-link header__logo-link--active" href="#">
                 <img
                   className="header__logo"
-                  src="../project/public/img/logo.svg"
+                  src="../img/logo.svg"
                   alt="6 cities logo"
                   width="81"
                   height="41"
@@ -103,7 +103,7 @@ export default function MainPage() {
                   <div className="cities__image-wrapper place-card__image-wrapper">
                     <a href="#">
                       <img className="place-card__image"
-                        src="../project/public/img/apartment-01.jpg"
+                        src="../img/apartment-01.jpg"
                         width="260"
                         height="200"
                         alt="Place image"
@@ -140,7 +140,7 @@ export default function MainPage() {
                   <div className="cities__image-wrapper place-card__image-wrapper">
                     <a href="#">
                       <img className="place-card__image"
-                        src="../project/public/img/room.jpg"
+                        src="../img/room.jpg"
                         width="260"
                         height="200"
                         alt="Place image"
@@ -177,7 +177,7 @@ export default function MainPage() {
                   <div className="cities__image-wrapper place-card__image-wrapper">
                     <a href="#">
                       <img className="place-card__image"
-                        src="../project/public/img/apartment-02.jpg"
+                        src="../img/apartment-02.jpg"
                         width="260"
                         height="200"
                         alt="Place image"
@@ -217,7 +217,7 @@ export default function MainPage() {
                   <div className="cities__image-wrapper place-card__image-wrapper">
                     <a href="#">
                       <img className="place-card__image"
-                        src="../project/public/img/apartment-03.jpg"
+                        src="../img/apartment-03.jpg"
                         width="260"
                         height="200"
                         alt="Place image"
@@ -254,7 +254,7 @@ export default function MainPage() {
                   <div className="cities__image-wrapper place-card__image-wrapper">
                     <a href="#">
                       <img className="place-card__image"
-                        src="../project/public/img/room.jpg"
+                        src="../img/room.jpg"
                         width="260"
                         height="200"
                         alt="Place image"
