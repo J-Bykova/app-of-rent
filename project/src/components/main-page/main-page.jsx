@@ -85,7 +85,7 @@ export default function MainPage() {
                 <span className="places__sorting-type" tabIndex="0">
                   Popular
                   <svg className="places__sorting-arrow" width="7" height="4">
-                    <use href="#icon-arrow-select"></use>
+                    <use xlinkHref="#icon-arrow-select"></use>
                   </svg>
                 </span>
                 <ul className="places__options places__options--custom places__options--opened">
@@ -118,7 +118,7 @@ export default function MainPage() {
                       </div>
                       <button className="place-card__bookmark-button button" type="button">
                         <svg className="place-card__bookmark-icon" width="18" height="19">
-                          <use href="#icon-bookmark"></use>
+                          <use xlinkHref="#icon-bookmark"></use>
                         </svg>
                         <span className="visually-hidden">To bookmarks</span>
                       </button>
@@ -155,7 +155,7 @@ export default function MainPage() {
                       </div>
                       <button className="place-card__bookmark-button place-card__bookmark-button--active button" type="button">
                         <svg className="place-card__bookmark-icon" width="18" height="19">
-                          <use href="#icon-bookmark"></use>
+                          <use xlinkHref="#icon-bookmark"></use>
                         </svg>
                         <span className="visually-hidden">In bookmarks</span>
                       </button>
@@ -192,7 +192,7 @@ export default function MainPage() {
                       </div>
                       <button className="place-card__bookmark-button button" type="button">
                         <svg className="place-card__bookmark-icon" width="18" height="19">
-                          <use href="#icon-bookmark"></use>
+                          <use xlinkHref="#icon-bookmark"></use>
                         </svg>
                         <span className="visually-hidden">To bookmarks</span>
                       </button>
@@ -232,7 +232,7 @@ export default function MainPage() {
                       </div>
                       <button className="place-card__bookmark-button button" type="button">
                         <svg className="place-card__bookmark-icon" width="18" height="19">
-                          <use href="#icon-bookmark"></use>
+                          <use xlinkHref="#icon-bookmark"></use>
                         </svg>
                         <span className="visually-hidden">To bookmarks</span>
                       </button>
@@ -269,7 +269,7 @@ export default function MainPage() {
                       </div>
                       <button className="place-card__bookmark-button place-card__bookmark-button--active button" type="button">
                         <svg className="place-card__bookmark-icon" width="18" height="19">
-                          <use href="#icon-bookmark"></use>
+                          <use xlinkHref="#icon-bookmark"></use>
                         </svg>
                         <span className="visually-hidden">In bookmarks</span>
                       </button>
