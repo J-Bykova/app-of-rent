@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
 * Студент: [Jenny B](https://up.htmlacademy.ru/react/7/user/206693).
-* Наставник: `Неизвестно`.
+* Наставник: [Денис Пуховский](https://htmlacademy.ru/profile/quasko).
 
 ---
 
