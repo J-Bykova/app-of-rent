@@ -99,7 +99,7 @@ export default function MainPage() {
               </form>
               <div className="cities__places-list places__list tabs__content">
                 {data.cards.map((card) => (
-                  <PlaceCard key={card.name} {...card}/>
+                  <PlaceCard key={card.id} {...card}/>
                 ))}
               </div>
             </section>

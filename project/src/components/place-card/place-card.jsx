@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 export default function PlaceCard(props) {
+  if (props.rating < 0 || props.rating > 100) {
+    throw new Error(`Rating must be between 0 and 100 but got: ${props.rating}`);
+  }
   return (
     <article className="cities__place-card place-card">
       {props.label && (
@@ -50,10 +53,10 @@ export default function PlaceCard(props) {
 
 PlaceCard.propTypes = {
   label: PropTypes.string,
-  image: PropTypes.string,
-  price: PropTypes.string,
-  name: PropTypes.string,
-  type: PropTypes.string,
-  rating: PropTypes.number,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
   saved: PropTypes.bool,
 };
