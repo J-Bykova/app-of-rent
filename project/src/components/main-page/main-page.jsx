@@ -1,8 +1,8 @@
 import React from 'react';
 import PlaceCard from '../place-card/place-card';
-import {data} from '../../data';
+import PropTypes from 'prop-types';
 
-export default function MainPage() {
+export default function MainPage(props) {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -25,7 +25,7 @@ export default function MainPage() {
                   <a className="header__nav-link header__nav-link--profile" href="#">
                     <div className="header__avatar-wrapper user__avatar-wrapper">
                     </div>
-                    <span className="header__user-name user__name">Oliver.conner@gmail.com</span>
+                    <span className="header__user-name user__name">{props.data.header.email}</span>
                   </a>
                 </li>
                 <li className="header__nav-item">
@@ -98,7 +98,7 @@ export default function MainPage() {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                {data.cards.map((card) => (
+                {props.data.cards.map((card) => (
                   <PlaceCard key={card.id} {...card}/>
                 ))}
               </div>
@@ -112,3 +112,7 @@ export default function MainPage() {
     </div>
   );
 }
+
+MainPage.propTypes = {
+  data: PropTypes.object.isRequired,
+};
