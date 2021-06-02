@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 export default function PlaceCard(props) {
-  if (props.rating < 0 || props.rating > 100) {
-    throw new Error(`Rating must be between 0 and 100 but got: ${props.rating}`);
-  }
   return (
     <article className="cities__place-card place-card">
       {props.label && (
