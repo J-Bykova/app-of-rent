@@ -98,7 +98,7 @@ export default function MainPage(props) {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                {props.data.cards.map((card) => (
+                {props.data.cards.slice(0, props.settings.CARDS_COUNT).map((card) => (
                   <PlaceCard key={card.id} {...card}/>
                 ))}
               </div>
@@ -115,4 +115,5 @@ export default function MainPage(props) {
 
 MainPage.propTypes = {
   data: PropTypes.object.isRequired,
+  settings: PropTypes.object.isRequired,
 };
