@@ -24,7 +24,7 @@ export default function App(props) {
           <PropertyPage settings={props.settings} />
         </Route>
         <Route>
-          <NotFoundPage/>
+          <NotFoundPage settings={props.settings}/>
         </Route>
       </Switch>
     </BrowserRouter>
