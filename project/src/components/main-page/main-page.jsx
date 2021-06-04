@@ -6,7 +6,7 @@ import HeaderSection from '../header-section/header-section';
 export default function MainPage(props) {
   return (
     <div className="page page--gray page--main">
-      <HeaderSection/>
+      <HeaderSection settings={props.settings}/>
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
         <div className="tabs">
@@ -66,7 +66,7 @@ export default function MainPage(props) {
               </form>
               <div className="cities__places-list places__list tabs__content">
                 {props.data.cards.slice(0, props.settings.CARDS_COUNT).map((card) => (
-                  <PlaceCard key={card.id} {...card}/>
+                  <PlaceCard key={card.id} settings={props.settings} {...card}/>
                 ))}
               </div>
             </section>

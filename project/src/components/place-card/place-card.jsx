@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import {Link} from 'react-router-dom';
 
 export default function PlaceCard(props) {
   return (
@@ -11,14 +12,14 @@ export default function PlaceCard(props) {
         </div>
       )}
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#">
+        <Link to={props.settings.routes.OFFER.replace(':id', props.id)}>
           <img className="place-card__image"
             src={props.image}
             width="260"
             height="200"
             alt="Place image"
           />
-        </a>
+        </Link>
       </div>
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
@@ -49,6 +50,8 @@ export default function PlaceCard(props) {
 }
 
 PlaceCard.propTypes = {
+  settings: PropTypes.object.isRequired,
+  id: PropTypes.string.isRequired,
   label: PropTypes.string,
   image: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,

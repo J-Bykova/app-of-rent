@@ -1,10 +1,11 @@
 import React from 'react';
 import HeaderSection from '../header-section/header-section';
+import PropTypes from 'prop-types';
 
-export default function LoginPage() {
+export default function LoginPage(props) {
   return (
     <div className="page page--gray page--login">
-      <HeaderSection/>
+      <HeaderSection settings={props.settings} />
       <main className="page__main page__main--login">
         <div className="page__login-container container">
           <section className="login">
@@ -35,3 +36,7 @@ export default function LoginPage() {
     </div>
   );
 }
+
+LoginPage.propTypes = {
+  settings: PropTypes.object.isRequired,
+};

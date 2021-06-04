@@ -1,10 +1,11 @@
 import React from 'react';
 import HeaderSection from '../header-section/header-section';
+import PropTypes from 'prop-types';
 
-export default function PropertyPage() {
+export default function PropertyPage(props) {
   return (
     <div className="page">
-      <HeaderSection/>
+      <HeaderSection settings={props.settings}/>
       <main className="page__main page__main--property">
         <section className="property">
           <div className="property__gallery-container container">
@@ -309,3 +310,7 @@ export default function PropertyPage() {
     </div>
   );
 }
+
+PropertyPage.propTypes = {
+  settings: PropTypes.object.isRequired,
+};

@@ -1,11 +1,12 @@
 import React from 'react';
 import HeaderSection from '../header-section/header-section';
 import FooterSection from '../footer-section/footer-section';
+import PropTypes from 'prop-types';
 
-export default function FavoritesPage() {
+export default function FavoritesPage(props) {
   return (
     <div className="page">
-      <HeaderSection/>
+      <HeaderSection settings={props.settings} />
       <main className="page__main page__main--favorites">
         <div className="page__favorites-container container">
           <section className="favorites">
@@ -148,3 +149,7 @@ export default function FavoritesPage() {
     </div>
   );
 }
+
+FavoritesPage.propTypes = {
+  settings: PropTypes.object.isRequired,
+};

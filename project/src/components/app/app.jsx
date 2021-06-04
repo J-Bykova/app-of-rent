@@ -7,27 +7,21 @@ import PropertyPage from '../property-page/property-page';
 import LoginPage from '../login-page/login-page';
 import NotFoundPage from '../not-found-page/not-found-page';
 
-const routes = {
-  Main: '/',
-  Login: '/login',
-  Favorites: '/favorites',
-  Property: '/offer/:id',
-};
 export default function App(props) {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path={routes.Main}>
+        <Route exact path={props.settings.routes.MAIN}>
           <MainPage settings={props.settings} data={props.data}/>
         </Route>
-        <Route exact path={routes.Login}>
-          <LoginPage/>
+        <Route exact path={props.settings.routes.LOGIN}>
+          <LoginPage settings={props.settings} />
         </Route>
-        <Route exact path={routes.Favorites}>
-          <FavoritesPage/>
+        <Route exact path={props.settings.routes.FAVORITES}>
+          <FavoritesPage settings={props.settings} />
         </Route>
-        <Route exact path={routes.Property}>
-          <PropertyPage/>
+        <Route exact path={props.settings.routes.OFFER}>
+          <PropertyPage settings={props.settings} />
         </Route>
         <Route>
           <NotFoundPage/>
