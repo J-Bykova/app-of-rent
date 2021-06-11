@@ -17,11 +17,11 @@ export default function NotFoundPage(props) {
   };
   return (
     <div style={wrapperStyles}>
-      <HeaderSection settings={props.settings} />
+      <HeaderSection routes={props.routes} />
       <div style={textStyles}>
         <h1>Error 404</h1>
         <p>Page not found</p>
-        <Link to={props.settings.routes.MAIN}>Back to main</Link>
+        <Link to={props.routes.MAIN}>Back to main</Link>
       </div>
       <FooterSection/>
     </div>
@@ -29,5 +29,5 @@ export default function NotFoundPage(props) {
 }
 
 NotFoundPage.propTypes = {
-  settings: PropTypes.object.isRequired,
+  routes: PropTypes.object.isRequired,
 };

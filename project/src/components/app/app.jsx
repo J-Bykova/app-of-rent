@@ -11,20 +11,20 @@ export default function App(props) {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path={props.settings.routes.MAIN}>
-          <MainPage settings={props.settings} data={props.data}/>
+        <Route exact path={props.routes.MAIN}>
+          <MainPage settings={props.settings} routes={props.routes} data={props.data}/>
         </Route>
-        <Route exact path={props.settings.routes.LOGIN}>
-          <LoginPage settings={props.settings} />
+        <Route exact path={props.routes.LOGIN}>
+          <LoginPage settings={props.settings} routes={props.routes}/>
         </Route>
-        <Route exact path={props.settings.routes.FAVORITES}>
-          <FavoritesPage settings={props.settings} />
+        <Route exact path={props.routes.FAVORITES}>
+          <FavoritesPage settings={props.settings} routes={props.routes}/>
         </Route>
-        <Route exact path={props.settings.routes.OFFER}>
-          <PropertyPage settings={props.settings} />
+        <Route exact path={props.routes.OFFER}>
+          <PropertyPage settings={props.settings} routes={props.routes}/>
         </Route>
         <Route>
-          <NotFoundPage settings={props.settings}/>
+          <NotFoundPage routes={props.routes}/>
         </Route>
       </Switch>
     </BrowserRouter>
@@ -34,4 +34,5 @@ export default function App(props) {
 App.propTypes = {
   data: PropTypes.object.isRequired,
   settings: PropTypes.object.isRequired,
+  routes: PropTypes.object.isRequired,
 };

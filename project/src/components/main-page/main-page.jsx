@@ -6,7 +6,7 @@ import HeaderSection from '../header-section/header-section';
 export default function MainPage(props) {
   return (
     <div className="page page--gray page--main">
-      <HeaderSection settings={props.settings}/>
+      <HeaderSection routes={props.routes}/>
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
         <div className="tabs">
@@ -66,7 +66,7 @@ export default function MainPage(props) {
               </form>
               <div className="cities__places-list places__list tabs__content">
                 {props.data.cards.slice(0, props.settings.CARDS_COUNT).map((card) => (
-                  <PlaceCard key={card.id} settings={props.settings} {...card}/>
+                  <PlaceCard key={card.id} settings={props.settings} routes={props.routes} {...card}/>
                 ))}
               </div>
             </section>
@@ -83,4 +83,5 @@ export default function MainPage(props) {
 MainPage.propTypes = {
   data: PropTypes.object.isRequired,
   settings: PropTypes.object.isRequired,
+  routes: PropTypes.object.isRequired,
 };

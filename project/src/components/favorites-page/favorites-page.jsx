@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export default function FavoritesPage(props) {
   return (
     <div className="page">
-      <HeaderSection settings={props.settings} />
+      <HeaderSection routes={props.routes} />
       <main className="page__main page__main--favorites">
         <div className="page__favorites-container container">
           <section className="favorites">
@@ -151,5 +151,5 @@ export default function FavoritesPage(props) {
 }
 
 FavoritesPage.propTypes = {
-  settings: PropTypes.object.isRequired,
+  routes: PropTypes.object.isRequired,
 };

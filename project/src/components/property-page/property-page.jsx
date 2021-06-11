@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default function PropertyPage(props) {
   return (
     <div className="page">
-      <HeaderSection settings={props.settings}/>
+      <HeaderSection routes={props.routes}/>
       <main className="page__main page__main--property">
         <section className="property">
           <div className="property__gallery-container container">
@@ -312,5 +312,5 @@ export default function PropertyPage(props) {
 }
 
 PropertyPage.propTypes = {
-  settings: PropTypes.object.isRequired,
+  routes: PropTypes.object.isRequired,
 };

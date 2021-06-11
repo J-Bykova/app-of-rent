@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default function LoginPage(props) {
   return (
     <div className="page page--gray page--login">
-      <HeaderSection settings={props.settings} />
+      <HeaderSection routes={props.routes} />
       <main className="page__main page__main--login">
         <div className="page__login-container container">
           <section className="login">
@@ -38,5 +38,5 @@ export default function LoginPage(props) {
 }
 
 LoginPage.propTypes = {
-  settings: PropTypes.object.isRequired,
+  routes: PropTypes.object.isRequired,
 };
