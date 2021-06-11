@@ -4,17 +4,18 @@ import HeaderSection from '../header-section/header-section';
 import FooterSection from '../footer-section/footer-section';
 import PropTypes from 'prop-types';
 
+const wrapperStyles = {
+  height: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+};
+const textStyles = {
+  textAlign: 'center',
+  marginTop: '50px',
+};
+
 export default function NotFoundPage(props) {
-  const wrapperStyles = {
-    height: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-  };
-  const textStyles = {
-    textAlign: 'center',
-    marginTop: '50px',
-  };
   return (
     <div style={wrapperStyles}>
       <HeaderSection routes={props.routes} />
