@@ -65,7 +65,7 @@ export default function PropertyPage(props) {
                   {offer.type}
                 </li>
                 <li className="property__feature property__feature--bedrooms">
-                  3 Bedrooms
+                  {offer.bedrooms} Bedrooms
                 </li>
                 <li className="property__feature property__feature--adults">
                   Max 4 adults

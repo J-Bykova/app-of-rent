@@ -1,5 +1,9 @@
-
 export function loadOffers(limit) {
+  fetch('https://7.react.pages.academy/six-cities/hotels')
+    .then((response) => response.json())
+    .then((json) => json.slice(0, 5))
+    // eslint-disable-next-line no-console
+    .then((data) => console.log(data));
   return fetch('https://7.react.pages.academy/six-cities/hotels')
     .then((response) => response.json())
     .then((json) => json.slice(0, limit))
@@ -29,5 +33,6 @@ function mapDataToClientModel(data) {
       isPro: data.host.is_pro,
       name: data.host.name,
     },
+    bedrooms: data.bedrooms,
   };
 }
