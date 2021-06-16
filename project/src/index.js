@@ -5,7 +5,9 @@ import {loadOffers} from './mocks/offers';
 import {settings} from './settings';
 import {routes} from './routes';
 
-loadOffers(settings.CARDS_COUNT).then((offers) => {
+async function main() {
+  const offers = await loadOffers(settings.CARDS_COUNT);
+
   ReactDOM.render(
     <React.StrictMode>
       <App
@@ -16,6 +18,6 @@ loadOffers(settings.CARDS_COUNT).then((offers) => {
     </React.StrictMode>,
     document.getElementById('root'),
   );
-});
+}
 
-
+main();
