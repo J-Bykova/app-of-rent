@@ -41,7 +41,7 @@ export default function PlaceCard(props) {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{props.name}</a>
+          <a href="#">{props.title}</a>
         </h2>
         <p className="place-card__type">{props.type}</p>
       </div>
@@ -55,7 +55,7 @@ PlaceCard.propTypes = {
   isPremium: PropTypes.bool,
   previewImage: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
   saved: PropTypes.bool,
