@@ -1,4 +1,3 @@
-export const user = [{
+export const user = {
   email: 'Oliver.conner@gmail.com',
-},
-];
+};
