@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import HeaderSection from '../header-section/header-section';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 export default function PropertyPage(props) {
   const offerId = useParams().id;
@@ -45,7 +46,7 @@ export default function PropertyPage(props) {
                 <h1 className="property__name">
                   {offer.title}
                 </h1>
-                <button className="property__bookmark-button button" type="button">
+                <button className={classNames('property__bookmark-button ', 'button', { 'property__bookmark-button--active': offer.isFavorite })}type="button">
                   <svg className="property__bookmark-icon" width="31" height="33">
                     <use xlinkHref="#icon-bookmark"></use>
                   </svg>
