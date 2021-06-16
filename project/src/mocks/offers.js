@@ -16,5 +16,11 @@ function mapDataToClientModel(data) {
     type: data.type,
     isFavorite: data.is_favorite,
     rating: data.rating,
+    host: {
+      avatarUrl: data.host.avatar_url,
+      id: data.host.id,
+      isPro: data.host.is_pro,
+      name: data.host.name,
+    },
   };
 }

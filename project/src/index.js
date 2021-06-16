@@ -7,6 +7,8 @@ import {routes} from './routes';
 
 async function main() {
   const offers = await loadOffers(settings.CARDS_COUNT);
+  // eslint-disable-next-line no-console
+  console.log(offers);
 
   ReactDOM.render(
     <React.StrictMode>
