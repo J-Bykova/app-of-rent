@@ -21,7 +21,7 @@ export default function App(props) {
           <FavoritesPage settings={props.settings} routes={props.routes}/>
         </Route>
         <Route exact path={props.routes.OFFER}>
-          <PropertyPage settings={props.settings} routes={props.routes}/>
+          <PropertyPage settings={props.settings} routes={props.routes} offers={props.offers}/>
         </Route>
         <Route>
           <NotFoundPage routes={props.routes}/>

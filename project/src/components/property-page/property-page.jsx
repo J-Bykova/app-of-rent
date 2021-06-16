@@ -1,8 +1,14 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import HeaderSection from '../header-section/header-section';
 import PropTypes from 'prop-types';
 
 export default function PropertyPage(props) {
+  const offerId = useParams().id;
+  const offer = props.offers.find((item) => String(item.id) === String(offerId));
+
+  // eslint-disable-next-line no-console
+  console.log(offer);
   return (
     <div className="page">
       <HeaderSection routes={props.routes}/>
@@ -37,7 +43,7 @@ export default function PropertyPage(props) {
               </div>
               <div className="property__name-wrapper">
                 <h1 className="property__name">
-                  Beautiful &amp; luxurious studio at great location
+                  {offer.title}
                 </h1>
                 <button className="property__bookmark-button button" type="button">
                   <svg className="property__bookmark-icon" width="31" height="33">
@@ -48,10 +54,10 @@ export default function PropertyPage(props) {
               </div>
               <div className="property__rating rating">
                 <div className="property__stars rating__stars">
-                  <span style={{width: '80%'}}></span>
+                  <span style={{width: `${100 / 5 * offer.rating}%`}}></span>
                   <span className="visually-hidden">Rating</span>
                 </div>
-                <span className="property__rating-value rating__value">4.8</span>
+                <span className="property__rating-value rating__value">{offer.rating}</span>
               </div>
               <ul className="property__features">
                 <li className="property__feature property__feature--entire">
@@ -313,4 +319,5 @@ export default function PropertyPage(props) {
 
 PropertyPage.propTypes = {
   routes: PropTypes.object.isRequired,
+  offers: PropTypes.array.isRequired,
 };
