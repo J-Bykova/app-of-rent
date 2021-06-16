@@ -12,6 +12,7 @@ export const offers = [{
   price: 120,
   title: 'Beautiful & luxurious apartment at great location',
   type: 'apartment',
+  isFavorite: false,
   rating: 100,
 }, {
   id: 2,
@@ -20,8 +21,8 @@ export const offers = [{
   price: 80,
   title: 'Wood and stone place',
   type: 'room',
+  isFavorite: true,
   rating: 80,
-  saved: true,
 }, {
   id: 3,
   isPremium: false,
@@ -29,6 +30,7 @@ export const offers = [{
   price: 132,
   title: 'Canal View Prinsengracht',
   type: 'apartment',
+  isFavorite: false,
   rating: 60,
 }, {
   id: 4,
@@ -37,6 +39,7 @@ export const offers = [{
   price: 180,
   title: 'Nice, cozy, warm big bed apartment',
   type: 'apartment',
+  isFavorite: false,
   rating: 50,
 }, {
   id: 5,
@@ -45,6 +48,6 @@ export const offers = [{
   price: 80,
   title: 'Wood and stone place',
   type: 'room',
+  isFavorite: true,
   rating: 100,
-  saved: true,
 }];
