@@ -54,7 +54,7 @@ PlaceCard.propTypes = {
   id: PropTypes.number.isRequired,
   isPremium: PropTypes.bool,
   previewImage: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
