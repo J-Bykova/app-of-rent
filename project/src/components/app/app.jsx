@@ -32,7 +32,7 @@ export default function App(props) {
 }
 
 App.propTypes = {
-  offers: PropTypes.object.isRequired,
+  offers: PropTypes.array.isRequired,
   settings: PropTypes.object.isRequired,
   routes: PropTypes.object.isRequired,
 };
