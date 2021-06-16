@@ -68,7 +68,7 @@ export default function PropertyPage(props) {
                   {offer.bedrooms} Bedrooms
                 </li>
                 <li className="property__feature property__feature--adults">
-                  Max 4 adults
+                  Max {offer.maxAdults} adults
                 </li>
               </ul>
               <div className="property__price">

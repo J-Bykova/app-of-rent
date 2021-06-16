@@ -34,5 +34,6 @@ function mapDataToClientModel(data) {
       name: data.host.name,
     },
     bedrooms: data.bedrooms,
+    maxAdults: data.max_adults,
   };
 }
