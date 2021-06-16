@@ -1,3 +1,10 @@
+
+export function loadOffers(limit) {
+  return fetch('https://7.react.pages.academy/six-cities/hotels')
+    .then((response) => response.json())
+    .then((json) => json.slice(0, limit));
+}
+
 export const offers = [{
   id: 'c8a57c3b-c2ed-4363-afd3-3d48c6212dcd',
   label: 'Premium',
