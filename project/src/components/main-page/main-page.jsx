@@ -65,7 +65,7 @@ export default function MainPage(props) {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                {props.offers.slice(0, props.settings.CARDS_COUNT).map((card) => (
+                {props.offers.map((card) => (
                   <PlaceCard key={card.id} settings={props.settings} routes={props.routes} {...card}/>
                 ))}
               </div>
