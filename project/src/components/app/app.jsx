@@ -12,7 +12,7 @@ export default function App(props) {
     <BrowserRouter>
       <Switch>
         <Route exact path={props.routes.MAIN}>
-          <MainPage settings={props.settings} routes={props.routes} data={props.data}/>
+          <MainPage settings={props.settings} routes={props.routes} offers={props.offers}/>
         </Route>
         <Route exact path={props.routes.LOGIN}>
           <LoginPage settings={props.settings} routes={props.routes}/>
@@ -32,7 +32,7 @@ export default function App(props) {
 }
 
 App.propTypes = {
-  data: PropTypes.object.isRequired,
+  offers: PropTypes.object.isRequired,
   settings: PropTypes.object.isRequired,
   routes: PropTypes.object.isRequired,
 };
