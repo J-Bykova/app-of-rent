@@ -14,7 +14,7 @@ export default function PlaceCard(props) {
       <div className="cities__image-wrapper place-card__image-wrapper">
         <Link to={props.routes.OFFER.replace(':id', props.id)}>
           <img className="place-card__image"
-            src={props.image}
+            src={props.previewImage}
             width="260"
             height="200"
             alt="Place image"
@@ -53,7 +53,7 @@ PlaceCard.propTypes = {
   routes: PropTypes.object.isRequired,
   id: PropTypes.number.isRequired,
   isPremium: PropTypes.bool,
-  image: PropTypes.string.isRequired,
+  previewImage: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
