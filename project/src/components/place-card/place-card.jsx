@@ -3,13 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {Link} from 'react-router-dom';
 
-const facilityTypeDictionary = {
-  'apartment': 'Apartment',
-  'room': 'Private Room',
-  'house': 'House',
-  'hotel': 'Hotel',
-};
-
 export default function PlaceCard(props) {
   return (
     <article className="cities__place-card place-card">
@@ -50,7 +43,7 @@ export default function PlaceCard(props) {
         <h2 className="place-card__name">
           <a href="#">{props.title}</a>
         </h2>
-        <p className="place-card__type">{facilityTypeDictionary[props.type]}</p>
+        <p className="place-card__type">{props.type}</p>
       </div>
     </article>
   );

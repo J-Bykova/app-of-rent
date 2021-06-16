@@ -6,6 +6,13 @@ export function loadOffers(limit) {
     .then((data) => data.map(mapDataToClientModel));
 }
 
+const facilityTypeDictionary = {
+  'apartment': 'Apartment',
+  'room': 'Private Room',
+  'house': 'House',
+  'hotel': 'Hotel',
+};
+
 function mapDataToClientModel(data) {
   return {
     id: data.id,
@@ -13,7 +20,7 @@ function mapDataToClientModel(data) {
     previewImage: data.preview_image,
     price: data.price,
     title: data.title,
-    type: data.type,
+    type: facilityTypeDictionary[data.type],
     isFavorite: data.is_favorite,
     rating: data.rating,
     host: {

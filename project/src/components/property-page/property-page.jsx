@@ -61,7 +61,7 @@ export default function PropertyPage(props) {
               </div>
               <ul className="property__features">
                 <li className="property__feature property__feature--entire">
-                  Apartment
+                  {offer.type}
                 </li>
                 <li className="property__feature property__feature--bedrooms">
                   3 Bedrooms
