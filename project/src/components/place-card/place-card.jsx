@@ -6,9 +6,9 @@ import {Link} from 'react-router-dom';
 export default function PlaceCard(props) {
   return (
     <article className="cities__place-card place-card">
-      {props.label && (
+      {props.isPremium && (
         <div className="place-card__mark">
-          <span>{props.label}</span>
+          <span>Premium</span>
         </div>
       )}
       <div className="cities__image-wrapper place-card__image-wrapper">
@@ -52,7 +52,7 @@ export default function PlaceCard(props) {
 PlaceCard.propTypes = {
   routes: PropTypes.object.isRequired,
   id: PropTypes.number.isRequired,
-  label: PropTypes.string,
+  isPremium: PropTypes.bool,
   image: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

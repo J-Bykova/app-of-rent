@@ -7,7 +7,7 @@ export function loadOffers(limit) {
 
 export const offers = [{
   id: 1,
-  label: 'Premium',
+  isPremium: true,
   image: '../img/apartment-01.jpg',
   price: '120',
   name: 'Beautiful & luxurious apartment at great location',
@@ -15,6 +15,7 @@ export const offers = [{
   rating: 100,
 }, {
   id: 2,
+  isPremium: false,
   image: '../img/room.jpg',
   price: '80',
   name: 'Wood and stone place',
@@ -23,6 +24,7 @@ export const offers = [{
   saved: true,
 }, {
   id: 3,
+  isPremium: false,
   image: '../img/apartment-02.jpg',
   price: '132',
   name: 'Canal View Prinsengracht',
@@ -30,7 +32,7 @@ export const offers = [{
   rating: 60,
 }, {
   id: 4,
-  label: 'Premium',
+  isPremium: true,
   image: '../img/apartment-03.jpg',
   price: '180',
   name: 'Nice, cozy, warm big bed apartment',
@@ -38,6 +40,7 @@ export const offers = [{
   rating: 50,
 }, {
   id: 5,
+  isPremium: false,
   image: '../img/room.jpg',
   price: '80',
   name: 'Wood and stone place',
