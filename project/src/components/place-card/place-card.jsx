@@ -51,7 +51,7 @@ export default function PlaceCard(props) {
 
 PlaceCard.propTypes = {
   routes: PropTypes.object.isRequired,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   label: PropTypes.string,
   image: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
