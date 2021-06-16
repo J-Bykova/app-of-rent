@@ -71,7 +71,7 @@ export default function PropertyPage(props) {
                 </li>
               </ul>
               <div className="property__price">
-                <b className="property__price-value">&euro;120</b>
+                <b className="property__price-value">&euro;{offer.price}</b>
                 <span className="property__price-text">&nbsp;night</span>
               </div>
               <div className="property__inside">
