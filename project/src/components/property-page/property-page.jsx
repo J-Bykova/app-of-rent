@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import HeaderSection from '../header-section/header-section';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import OfferGallery from '../offer-gallery/offer-gallery';
 
 export default function PropertyPage(props) {
   const offerId = useParams().id;
@@ -16,26 +17,7 @@ export default function PropertyPage(props) {
       <main className="page__main page__main--property">
         <section className="property">
           <div className="property__gallery-container container">
-            <div className="property__gallery">
-              <div className="property__image-wrapper">
-                <img className="property__image" src="/img/room.jpg" alt="Photo studio"/>
-              </div>
-              <div className="property__image-wrapper">
-                <img className="property__image" src="img/apartment-01.jpg" alt="Photo studio"/>
-              </div>
-              <div className="property__image-wrapper">
-                <img className="property__image" src="img/apartment-02.jpg" alt="Photo studio"/>
-              </div>
-              <div className="property__image-wrapper">
-                <img className="property__image" src="img/apartment-03.jpg" alt="Photo studio"/>
-              </div>
-              <div className="property__image-wrapper">
-                <img className="property__image" src="img/studio-01.jpg" alt="Photo studio"/>
-              </div>
-              <div className="property__image-wrapper">
-                <img className="property__image" src="img/apartment-01.jpg" alt="Photo studio"/>
-              </div>
-            </div>
+            <OfferGallery/>
           </div>
           <div className="property__container container">
             <div className="property__wrapper">
