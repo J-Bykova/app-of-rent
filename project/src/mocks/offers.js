@@ -1,13 +1,7 @@
+import {loadRestData} from '../utils/loadRestData';
+
 export function loadOffers(limit) {
-  fetch('https://7.react.pages.academy/six-cities/hotels')
-    .then((response) => response.json())
-    .then((json) => json.slice(0, 5))
-    // eslint-disable-next-line no-console
-    .then((data) => console.log(data));
-  return fetch('https://7.react.pages.academy/six-cities/hotels')
-    .then((response) => response.json())
-    .then((json) => json.slice(0, limit))
-    .then((data) => data.map(mapDataToClientModel));
+  return loadRestData('https://7.react.pages.academy/six-cities/hotels', mapDataToClientModel, limit);
 }
 
 const facilityTypeDictionary = {
