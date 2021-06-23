@@ -4,11 +4,15 @@ import App from './components/app/app';
 import {loadOffers} from './mocks/offers';
 import {settings} from './settings';
 import {routes} from './routes';
+import {loadReviews} from './mocks/reviews';
 
 async function main() {
   const offers = await loadOffers(settings.CARDS_COUNT);
-  // eslint-disable-next-line no-console
-  console.log(offers);
+  const reviews = {};
+
+  for (const offer of offers) {
+    reviews[offer.id] = await loadReviews(offer.id, 5);
+  }
 
   ReactDOM.render(
     <React.StrictMode>
