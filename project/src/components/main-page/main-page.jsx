@@ -1,5 +1,5 @@
 import React from 'react';
-import PlaceCard from '../place-card/place-card';
+import OffersList from '../offers-list/offers-list.jsx';
 import PropTypes from 'prop-types';
 import HeaderSection from '../header-section/header-section';
 import LocationsTabsSection from '../locations-tabs-section/locations-tabs-section';
@@ -15,29 +15,7 @@ export default function MainPage(props) {
         </div>
         <div className="cities">
           <div className="cities__places-container container">
-            <section className="cities__places places">
-              <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">312 places to stay in Amsterdam</b>
-              <form className="places__sorting" action="#" method="get">
-                <span className="places__sorting-caption">Sort by</span>
-                <span className="places__sorting-type" tabIndex="0">Popular
-                  <svg className="places__sorting-arrow" width="7" height="4">
-                    <use xlinkHref="#icon-arrow-select"></use>
-                  </svg>
-                </span>
-                <ul className="places__options places__options--custom places__options--opened">
-                  <li className="places__option places__option--active" tabIndex="0">Popular</li>
-                  <li className="places__option" tabIndex="0">Price: low to high</li>
-                  <li className="places__option" tabIndex="0">Price: high to low</li>
-                  <li className="places__option" tabIndex="0">Top rated first</li>
-                </ul>
-              </form>
-              <div className="cities__places-list places__list tabs__content">
-                {props.offers.map((card) => (
-                  <PlaceCard key={card.id} settings={props.settings} routes={props.routes} {...card}/>
-                ))}
-              </div>
-            </section>
+            <OffersList offers={props.offers} settings={props.settings} routes={props.routes}/>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
             </div>
@@ -50,6 +28,6 @@ export default function MainPage(props) {
 
 MainPage.propTypes = {
   offers: PropTypes.array.isRequired,
-  settings: PropTypes.object.isRequired,
   routes: PropTypes.object.isRequired,
+  settings: PropTypes.object.isRequired,
 };
