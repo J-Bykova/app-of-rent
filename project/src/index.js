@@ -20,6 +20,7 @@ async function main() {
         settings={settings}
         routes={routes}
         offers={offers}
+        reviews={reviews}
       />
     </React.StrictMode>,
     document.getElementById('root'),

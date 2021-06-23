@@ -21,7 +21,7 @@ export default function App(props) {
           <FavoritesPage settings={props.settings} routes={props.routes}/>
         </Route>
         <Route exact path={props.routes.OFFER}>
-          <PropertyPage settings={props.settings} routes={props.routes} offers={props.offers}/>
+          <PropertyPage settings={props.settings} routes={props.routes} offers={props.offers} reviews={props.reviews}/>
         </Route>
         <Route>
           <NotFoundPage routes={props.routes}/>
@@ -33,6 +33,7 @@ export default function App(props) {
 
 App.propTypes = {
   offers: PropTypes.array.isRequired,
+  reviews: PropTypes.object.isRequired,
   settings: PropTypes.object.isRequired,
   routes: PropTypes.object.isRequired,
 };
