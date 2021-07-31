@@ -51,27 +51,25 @@ export default class ReviewForm extends React.Component {
         <label className="reviews__label form__label" htmlFor="review">Your review</label>
         <div className="reviews__rating-form form__rating">
           {stars.map((star) => (
-            <>
+            <React.Fragment key={star.id}>
               <input
                 className="form__rating-input visually-hidden"
                 name="rating"
                 value={star.value}
                 id={star.id}
                 type="radio"
-                key={star.value}
                 onChange={this.handleFieldChange}
               />
               <label
                 className="reviews__rating-label form__rating-label"
                 htmlFor={star.id}
                 title={star.title}
-                key={star.value}
               >
                 <svg className="form__star-image" width="37" height="33">
                   <use xlinkHref="#icon-star"></use>
                 </svg>
               </label>
-            </>
+            </React.Fragment>
           ))}
         </div>
         <textarea
